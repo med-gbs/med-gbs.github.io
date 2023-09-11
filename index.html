@@ -31,6 +31,48 @@
    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
    </script>
    <!-- [if lt IE 9] -->
+
+    <style>
+        /* Styling for the photo container */
+        .photo-container {
+            width: 300px;
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Styling for the photo scroll area */
+        .photo-scroll {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.3s ease;
+        }
+
+        /* Styling for individual photos */
+        .photo-scroll img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Styling for the scroll buttons */
+        .scroll-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+
+        .scroll-left {
+            left: 10px;
+        }
+
+        .scroll-right {
+            right: 10px;
+        }
+    </style>
+
    </head>
    <body class="clinic_version">
       <!-- LOADER -->
@@ -77,6 +119,7 @@
                         <li><a data-scroll href="#schedule">Schedule</a></li>
                         <li><a data-scroll href="#photos">Photos</a></li>
                         <li><a data-scroll href="#The Board!">The Board!</a></li>
+                        <li><a data-scroll href="https://classroom.google.com/u/0/c/MTMxMzQ0NzY2NTYw">Google Classroom</a></li>
                      </ul>
                   </div>
                </nav>
@@ -111,7 +154,8 @@
                   <div class="service-time one" style="background:#2895f1;">
                      <h3>Welcome!</h3>
                      <p>The GBS Medical Chapter offers students a chance to explore the field of medicine. We meet every other Wednesday from 3:30pm-4:30pm, 
-                     covering diverse topics like guest speaker sessions, disease discussions, fun medical games/activities, and medical school preparation. Join our Google Classroom (click icon up above) for updates, 
+                     covering diverse topics like guest speaker sessions, disease discussions, fun medical games/activities, and medical school preparation. 
+                     Join our <a href="https://classroom.google.com/c/MTMxMzQ0NzY2NTYw?cjc=wvkmboa">Google Classroom</a> for updates, 
                      and feel free to drop by out of curiosity – no commitment required. Exciting times ahead this semester!</p>
                   </div>
                </div>
@@ -169,11 +213,31 @@
                <span class="icon-logo"><img src="images/icon-logo.png" alt="#"></span>
                <h2>Photos</h2>
             </div>
-            <p>TBD</p>
-            
+    <div class="photo-container">
+        <div class="photo-scroll">
+            <img src="image1.jpg" alt="Image 1">
+            <img src="image2.jpg" alt="Image 2">
+            <img src="image3.jpg" alt="Image 3">
+            <!-- Add more images as needed -->
+        </div>
+    </div>
 
-        
-            
+    <div class="scroll-button scroll-left" onclick="scrollLeft()">&#10094;</div>
+    <div class="scroll-button scroll-right" onclick="scrollRight()">&#10095;</div>
+
+    <script>
+        // JavaScript for scrolling left
+        function scrollLeft() {
+            const photoContainer = document.querySelector('.photo-container');
+            photoContainer.scrollLeft -= 100; // Adjust scroll amount as needed
+        }
+
+        // JavaScript for scrolling right
+        function scrollRight() {
+            const photoContainer = document.querySelector('.photo-container');
+            photoContainer.scrollLeft += 100; // Adjust scroll amount as needed
+        }
+    </script>            
             </div>
             </div>
 
@@ -267,8 +331,8 @@
                <div class="col-md-4">
                   <div class="social">
                      <ul class="social-links">
-                        <li><a href=""><i class="fa fa-google-class"></i></a></li>
-                        <li><a href=""><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="https://classroom.google.com/u/0/c/MTMxMzQ0NzY2NTYw"><i class="fa fa-google"></i></a></li>
+                        <li><a href="https://www.instagram.com/gbsmedchapter/"><i class="fa fa-instagram"></i></a></li>
                      </ul>
                   </div>
                </div>
