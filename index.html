@@ -137,11 +137,19 @@
 
     $(document).ready(function () {
         // Bind the search function to the search button click event
-        $("#search-button").click(function () {
+        $("#search-button").click(function (e) {
+            e.preventDefault(); // Prevent the default form submission
+            performSearch();
+        });
+
+        // Bind the search function to the form submission event
+        $("#search-form").submit(function (e) {
+            e.preventDefault(); // Prevent the default form submission
             performSearch();
         });
     });
 </script>
+
 
 
 
