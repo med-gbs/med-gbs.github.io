@@ -119,8 +119,15 @@
             container.append("<p>No results found.</p>");
         } else {
             results.forEach(result => {
-                container.append(`<p>${result}</p>`);
+                // Highlight and scroll to the search term
+                const highlightedResult = result.replace(new RegExp($("#search-input").val(), 'gi'), '<span class="highlight">$&</span>');
+                container.append(`<p>${highlightedResult}</p>`);
             });
+
+            // Scroll to the first search result
+            $('html, body').animate({
+                scrollTop: $("#search-results-container").offset().top
+            }, 500);
         }
     }
 
@@ -131,6 +138,7 @@
         });
     });
 </script>
+
 
             </div>
          </div>
