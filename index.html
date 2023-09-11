@@ -1,6 +1,32 @@
  <!DOCTYPE html>
 <html lang="en">
+	<head>
    <!-- Basic -->
+   <style>
+         /* CSS for the Schedule Section */
+         .schedule-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .schedule-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .schedule-left {
+            flex: 1;
+            font-weight: bold;
+            padding-right: 10px;
+        }
+
+        .schedule-right {
+            flex: 1;
+            text-align: right;
+        }
+    </style>
    <meta charset="utf-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <!-- Mobile Metas -->
@@ -150,20 +176,35 @@
       </div>
       
 	   <div id="schedule" class="services wow fadeIn">
-        <div class="container">
-            <div class="heading">
-                <span class="icon-logo"><img src="images/icon-logo.png" alt="#"></span>
-                <h2>Schedule</h2>
-            </div>
-            <div class="time-table-section">
-                <ul>
-                    <li><span class="left">First Meeting of the Year!</span><span class="right">9/13/2023</span></li>
-                    <li><span class="left">Tentative Medical Equipment Testing and More...</span><span class="right">9/27/2023</span></li>
-                    <li><span class="left">Guest Speaker (Dr. Thomas Gleason, Orthopedic Surgeon)</span><span class="right">10/11/2023</span></li>
-                </ul>
-            </div>
+    <div class="container">
+        <div class="heading">
+            <span class="icon-logo"><img src="images/icon-logo.png" alt="#"></span>
+            <h2>Schedule</h2>
+        </div>
+        <div class="time-table-section">
+            <ul class="schedule-list">
+                <li>
+                    <div class="schedule-item">
+                        <span class="schedule-left">First Meeting of the Year!</span>
+                        <span class="schedule-right">9/13/2023</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="schedule-item">
+                        <span class="schedule-left">Tentative Medical Equipment Testing and More...</span>
+                        <span class="schedule-right">9/27/2023</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="schedule-item">
+                        <span class="schedule-left">Guest Speaker (Dr. Thomas Gleason, Orthopedic Surgeon)</span>
+                        <span class="schedule-right">10/11/2023</span>
+                    </div>
+                </li>
+            </ul>
         </div>
     </div>
+</div>
 
       <!-- end section -->	       
       
