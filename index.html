@@ -81,18 +81,57 @@
                      </ul>
                   </div>
                </nav>
-               <div class="search-bar">
-                  <div id="custom-search-input">
-                     <div class="input-group col-md-12">
-                        <input type="text" class="form-control input-lg" placeholder="Search" />
-                        <span class="input-group-btn">
-                        <button class="btn btn-info btn-lg" type="button">
-                        <i class="fa fa-search" aria-hidden="true"></i>
-                        </button>
-                        </span>
-                     </div>
-                  </div>
-               </div>
+              <div id="custom-search-input">
+    <div class="input-group col-md-12">
+        <input type="text" class="form-control input-lg" id="search-input" placeholder="Search" />
+        <span class="input-group-btn">
+            <button class="btn btn-info btn-lg" type="button" id="search-button">
+                <i class="fa fa-search" aria-hidden="true"></i>
+            </button>
+        </span>
+    </div>
+</div>
+
+<div id="search-results-container">
+</div>
+
+<script>
+    function performSearch() {
+        // Get the user's search query from the input
+        const searchTerm = $("#search-input").val().toLowerCase();
+        const content = $("body").text().toLowerCase(); // Get all text content from the webpage body
+
+        const results = [];
+        
+        // Search for the search term within the content
+        if (content.includes(searchTerm)) {
+            results.push(content);
+        }
+
+        displaySearchResults(results);
+    }
+
+    function displaySearchResults(results) {
+        const container = $("#search-results-container");
+        container.empty();
+
+        if (results.length === 0) {
+            container.append("<p>No results found.</p>");
+        } else {
+            results.forEach(result => {
+                container.append(`<p>${result}</p>`);
+            });
+        }
+    }
+
+    $(document).ready(function () {
+        // Bind the search function to the search button click event
+        $("#search-button").click(function () {
+            performSearch();
+        });
+    });
+</script>
+
             </div>
          </div>
       </header>
