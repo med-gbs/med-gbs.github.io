@@ -223,9 +223,67 @@
 		
 		<div class="heading">
                <span class="icon-logo"><img src="images/icon-logo.png" alt="#"></span>
-               <h2>Photos</h2>
+<!--               <h2>Photos</h2>
             </div>
-            <p>TBD</p>
+            <p>TBD</p>-->
+            
+<h1>Webpage Keyword Search</h1>
+
+    <!-- Search input field -->
+    <input type="text" id="searchInput" placeholder="Enter keyword(s)">
+    
+    <!-- Search button -->
+    <button id="searchButton">Search</button>
+
+    <!-- Search results container -->
+    <div id="searchResults">
+        <h2>Search Results</h2>
+        <ul id="resultsList">
+            <!-- Search results will be displayed here -->
+        </ul>
+    </div>        
+    
+<!-- JavaScript code for search functionality -->
+    <script>
+        // Function to perform the search
+        function performSearch() {
+            // Get the search input value
+            var searchKeyword = document.getElementById('searchInput').value.toLowerCase();
+            
+            // Get all the text content on the current webpage
+            var pageText = document.body.textContent.toLowerCase();
+
+            // Split the page text into words
+            var words = pageText.split(/\s+/);
+
+            // Search for the keyword in the words
+            var searchResults = words.filter(function(word) {
+                return word.includes(searchKeyword);
+            });
+
+            // Display search results
+            var resultsList = document.getElementById('resultsList');
+            resultsList.innerHTML = '';
+
+            if (searchResults.length > 0) {
+                searchResults.forEach(function(result) {
+                    var listItem = document.createElement('li');
+                    listItem.textContent = result;
+                    resultsList.appendChild(listItem);
+                });
+            } else {
+                var noResultsMessage = document.createElement('p');
+                noResultsMessage.textContent = 'No results found.';
+                resultsList.appendChild(noResultsMessage);
+            }
+        }
+
+        // Attach the performSearch function to the search button's click event
+        var searchButton = document.getElementById('searchButton');
+        searchButton.addEventListener('click', performSearch);
+    </script>    
+        
+            
             </div>
             </div>
 
