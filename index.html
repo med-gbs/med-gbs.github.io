@@ -27,7 +27,9 @@
    <!-- Custom CSS -->
    <link rel="stylesheet" href="css/custom.css">
    <!-- Modernizer for Portfolio -->
-   <script src="js/modernizer.js"></script>
+   <script src="js/modernizer.js">
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   </script>
    <!-- [if lt IE 9] -->
    </head>
    <body class="clinic_version">
@@ -74,23 +76,75 @@
                         <li><a class="active" href="index.html">Home</a></li>
                         <li><a data-scroll href="#schedule">Schedule</a></li>
                         <li><a data-scroll href="#photos">Photos</a></li>
-                        <li><a data-scroll href="#leadership">Leadership</a></li>
+                        <li><a data-scroll href="#The Board!">The Board!</a></li>
                         <li><a data-scroll href="#getintouch">Contact</a></li>
                      </ul>
                   </div>
                </nav>
-               <div class="search-bar">
-                  <div id="custom-search-input">
-                     <div class="input-group col-md-12">
-                        <input type="text" class="form-control input-lg" placeholder="Search" />
-                        <span class="input-group-btn">
-                        <button class="btn btn-info btn-lg" type="button">
-                        <i class="fa fa-search" aria-hidden="true"></i>
-                        </button>
-                        </span>
-                     </div>
-                  </div>
-               </div>
+              <div id="custom-search-input">
+    <div class="input-group col-md-12">
+        <input type="text" class="form-control input-lg" id="search-input" placeholder="Search" />
+        <span class="input-group-btn">
+            <button class="btn btn-info btn-lg" type="button" id="search-button">
+                <i class="fa fa-search" aria-hidden="true"></i>
+            </button>
+        </span>
+    </div>
+</div>
+
+<div id="search-results-container">
+</div>
+
+<!-- Add this corrected JavaScript code inside your HTML file -->
+<script>
+    function performSearch() {
+        // Get the user's search query from the input
+        const searchTerm = $("#search-input").val().toLowerCase();
+        const content = $("body").text().toLowerCase(); // Get all text content from the webpage body
+
+        const results = [];
+
+        // Use a regular expression to find all occurrences of the search term
+        const regex = new RegExp(searchTerm, 'gi');
+        const matches = content.match(regex);
+
+        if (matches) {
+            results.push(...matches);
+        }
+
+        displaySearchResults(results);
+    }
+
+    function displaySearchResults(results) {
+        const container = $("#search-results-container");
+        container.empty();
+
+        if (results.length === 0) {
+            container.append("<p>No results found.</p>");
+        } else {
+            results.forEach(result => {
+                // Highlight and scroll to the search term
+                const highlightedResult = $("body").html().replace(new RegExp(result, 'gi'), '<span class="highlight">$&</span>');
+                container.append(`<p>${highlightedResult}</p>`);
+            });
+
+            // Scroll to the first search result
+            $('html, body').animate({
+                scrollTop: $("#search-results-container").offset().top
+            }, 500);
+        }
+    }
+
+    $(document).ready(function () {
+        // Bind the search function to the search button click event
+        $("#search-button").click(function () {
+            performSearch();
+        });
+    });
+</script>
+
+
+
             </div>
          </div>
       </header>
@@ -179,7 +233,7 @@
       
 	  <!-- doctor -->
 	  
-	  <div id="leadership" class="parallax section db" data-stellar-background-ratio="0.4" style="background:#fff;" data-scroll-id="leadership" tabindex="-1">
+	  <div id="The Board!" class="parallax section db" data-stellar-background-ratio="0.4" style="background:#fff;" data-scroll-id="The Board!" tabindex="-1">
         <div class="container">
 		
 		<div class="heading">
