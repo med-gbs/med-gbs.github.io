@@ -95,6 +95,7 @@
 <div id="search-results-container">
 </div>
 
+<!-- Add this corrected JavaScript code inside your HTML file -->
 <script>
     function performSearch() {
         // Get the user's search query from the input
@@ -102,10 +103,13 @@
         const content = $("body").text().toLowerCase(); // Get all text content from the webpage body
 
         const results = [];
-        
-        // Search for the search term within the content
-        if (content.includes(searchTerm)) {
-            results.push(content);
+
+        // Use a regular expression to find all occurrences of the search term
+        const regex = new RegExp(searchTerm, 'gi');
+        const matches = content.match(regex);
+
+        if (matches) {
+            results.push(...matches);
         }
 
         displaySearchResults(results);
@@ -120,7 +124,7 @@
         } else {
             results.forEach(result => {
                 // Highlight and scroll to the search term
-                const highlightedResult = result.replace(new RegExp($("#search-input").val(), 'gi'), '<span class="highlight">$&</span>');
+                const highlightedResult = $("body").html().replace(new RegExp(result, 'gi'), '<span class="highlight">$&</span>');
                 container.append(`<p>${highlightedResult}</p>`);
             });
 
@@ -138,6 +142,7 @@
         });
     });
 </script>
+
 
 
             </div>
