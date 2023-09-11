@@ -32,46 +32,7 @@
    </script>
    <!-- [if lt IE 9] -->
 
-    <style>
-        /* Styling for the photo container */
-        .photo-container {
-            width: 300px;
-            height: 200px;
-            overflow: hidden;
-            position: relative;
-        }
-
-        /* Styling for the photo scroll area */
-        .photo-scroll {
-            display: flex;
-            width: 100%;
-            height: 100%;
-            transition: transform 0.3s ease;
-        }
-
-        /* Styling for individual photos */
-        .photo-scroll img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* Styling for the scroll buttons */
-        .scroll-button {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            cursor: pointer;
-        }
-
-        .scroll-left {
-            left: 10px;
-        }
-
-        .scroll-right {
-            right: 10px;
-        }
-    </style>
+ 
 
    </head>
    <body class="clinic_version">
@@ -213,17 +174,17 @@
                <span class="icon-logo"><img src="images/icon-logo.png" alt="#"></span>
                <h2>Photos</h2>
             </div>
-    <div class="photo-container">
-        <div class="photo-scroll">
-            <img src="images/johnny.jpg" alt="Image 1">
-            <img src="images/lucas.jpg" alt="Image 2">
-            <img src="images/sarah.jpg" alt="Image 3">
+     <div class="photo-container" style="width: 300px; height: 200px; overflow: hidden; position: relative;">
+        <div class="photo-scroll" style="display: flex; width: 100%; height: 100%; white-space: nowrap;">
+            <img src="images/johnny.jpg" alt="Image 1" style="width: 300px; height: 200px; object-fit: cover;">
+            <img src="images/lucas.jpg" alt="Image 2" style="width: 300px; height: 200px; object-fit: cover;">
+            <img src="images/sarah.jpg" alt="Image 3" style="width: 300px; height: 200px; object-fit: cover;">
             <!-- Add more images as needed -->
         </div>
     </div>
 
-    <div class="scroll-button scroll-left" onclick="scrollLeft()">&#10094;</div>
-    <div class="scroll-button scroll-right" onclick="scrollRight()">&#10095;</div>
+    <button class="scroll-button" onclick="scrollLeft()">&#10094;</button>
+    <button class="scroll-button" onclick="scrollRight()">&#10095;</button>
 
     <script>
         // JavaScript for scrolling left
@@ -237,7 +198,7 @@
             const photoContainer = document.querySelector('.photo-container');
             photoContainer.scrollLeft += 100; // Adjust scroll amount as needed
         }
-    </script>            
+    </script>
             </div>
             </div>
 
