@@ -36,54 +36,62 @@
         color: #ffffff; /* White color */
     
 	/* CSS for Guest Speakers Button and Pop-up */
-	.speaker-button {
-    	text-align: center;
-    	margin-top: 20px;
-	}
+	 .event-details h3 {
+        color: #000000;
+        }
+    .event-details p {
+        color: #ffffff; /* White color */
+    }
 
-	.speaker-toggle-button {
-    	background-color: #0071d1;
-    	color: #fff;
-    	border: none;
-    	padding: 10px 20px;
-    	cursor: pointer;
-    	font-size: 18px;
-    	border-radius: 5px;
-	}
+    /* CSS for Guest Speakers Button and Pop-up */
+    .speaker-button {
+        text-align: center;
+        margin-top: 20px;
+    }
 
-	.speaker-toggle-button:hover + .speaker-popup {
-    	display: block;
-	}
+    .speaker-toggle-button {
+        background-color: #0071d1;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 18px;
+        border-radius: 5px;
+    }
 
-	.speaker-popup {
-    	display: none;
-    	position: absolute;
-    	background-color: #fff;
-    	padding: 10px;
-    	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-    	z-index: 1;
-   	 text-align: left;
-	}
+    .speaker-toggle-button:hover + .speaker-popup {
+        display: block;
+    }
 
-	.speaker-popup a {
-    	color: #0071d1;
-    	text-decoration: none;
-    	display: block;
-    	margin-bottom: 5px;
-	}
+    .speaker-popup {
+        display: none;
+        position: absolute;
+        background-color: #fff;
+        padding: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+        z-index: 1;
+        text-align: left;
+    }
 
-	.speaker-popup a:hover {
-    	text-decoration: underline;
-	}
-	
-	.speaker-details img {
-    	max-width: 100%;
-    	height: auto;
-    	margin-bottom: 10px;
-    	border: 2px solid #0071d1;
-    	border-radius: 5px;
-    	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
-	}
+    .speaker-popup a {
+        color: #0071d1;
+        text-decoration: none;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .speaker-popup a:hover {
+        text-decoration: underline;
+    }
+
+    .speaker-details img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+        border: 2px solid #0071d1;
+        border-radius: 5px;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+        }
 	</style>
 
 	
@@ -166,7 +174,7 @@
                         <li><a data-scroll href="#schedule">Schedule</a></li>
                         <li><a data-scroll href="https://drive.google.com/drive/folders/1RzVTU5mcfyhJ88q8qwm0uMFGbu-h1wb_?usp=share_link">Photos</a></li>
                         <li><a data-scroll href="#The Board">The Board</a></li>
-                        <li><a data-scroll href="guest-speakers">Guest Speakers</a></li>
+                        <li><a href="guest-speakers.html">Guest Speakers</a></li>
                         <li><a data-scroll href="https://classroom.google.com/u/0/c/MTMxMzQ0NzY2NTYw">Google Classroom</a></li>
                         <li><a data-scroll href=" https://docs.google.com/forms/d/e/1FAIpQLSd5ZtuapHlhTNQA_u_-T5EixGAgkrHbQDz2_ZvI-FobHW2ppg/viewform?usp=sf_link">New Member Registration</a></li>
                      </ul>
@@ -365,60 +373,6 @@
         </div>
     </div>
 </div>
-<div id="speakers" class="guest-speakers-section">
-    <div class="container">
-        <div class="heading">
-            <span class="icon-logo"><img src="images/icon-logo.png" alt="#"></span>
-            <h2>Guest Speakers</h2>
-        </div>
-        <div class="speaker-button">
-            <button class="speaker-toggle-button">Meet Our Speakers</button>
-            <div class="speaker-popup">
-                <p><a data-scroll href="#speaker1">Speaker 1</a></p>
-                <p><a data-scroll href="#speaker2">Speaker 2</a></p>
-                <p><a data-scroll href="#speaker3">Speaker 3</a></p>
-                <!-- Add more speakers as needed -->
-            </div>
-        </div>
-    </div>
-</div>
-<div id="speaker1" class="speaker-section">
-    <div class="container">
-        <div class="speaker-details">
-            <img src="images/speaker1.jpg" alt="Speaker 1">
-            <h3>Speaker 1</h3>
-            <p>Topic: [Topic Name]</p>
-            <p>Date: [Date]</p>
-            <!-- Add more details as needed -->
-        </div>
-    </div>
-</div>
-
-<div id="speaker2" class="speaker-section">
-    <div class="container">
-        <div class="speaker-details">
-            <img src="images/speaker2.jpg" alt="Speaker 2">
-            <h3>Speaker 2</h3>
-            <p>Topic: [Topic Name]</p>
-            <p>Date: [Date]</p>
-            <!-- Add more details as needed -->
-        </div>
-    </div>
-</div>
-
-<div id="speaker3" class="speaker-section">
-    <div class="container">
-        <div class="speaker-details">
-            <img src="images/speaker3.jpg" alt="Speaker 3">
-            <h3>Speaker 3</h3>
-            <p>Topic: [Topic Name]</p>
-            <p>Date: [Date]</p>
-            <!-- Add more details as needed -->
-        </div>
-    </div>
-</div>
-
-	  
 
       <div class="copyright-area wow fadeIn">
          <div class="container">
@@ -440,10 +394,40 @@
          </div>
       </div>
       <!-- end copyrights -->
-      <a href="#home" data-scroll class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
-      <!-- all js files -->
+      <a href="#" id="scroll-to-top" class="hvr-radial-out wow zoomIn"><i class="fa fa-angle-up"></i></a>
+      <!-- ALL JS FILES -->
       <script src="js/all.js"></script>
-      <!-- all plugins -->
+      <!-- ALL PLUGINS -->
       <script src="js/custom.js"></script>
+      <script src="js/timeline.min.js"></script>
+      <script src="js/waypoints.js"></script>
+      <script src="js/timeline-main.js"></script>
+      <!-- REVOLUTION JS FILES -->
+      <script src="revslider/js/jquery.themepunch.tools.min.js"></script>
+      <script src="revslider/js/jquery.themepunch.revolution.min.js"></script>
+      <!-- SLIDER REVOLUTION 5.0 EXTENSIONS  
+         (Load Extensions only on Local File Systems ! 
+          The following part can be removed on Server for On Demand Loading) -->
+      <script src="revslider/js/extensions/revolution.extension.actions.min.js"></script>
+      <script src="revslider/js/extensions/revolution.extension.carousel.min.js"></script>
+      <script src="revslider/js/extensions/revolution.extension.kenburn.min.js"></script>
+      <script src="revslider/js/extensions/revolution.extension.layeranimation.min.js"></script>
+      <script src="revslider/js/extensions/revolution.extension.migration.min.js"></script>
+      <script src="revslider/js/extensions/revolution.extension.navigation.min.js"></script>
+      <script src="revslider/js/extensions/revolution.extension.parallax.min.js"></script>
+      <script src="revslider/js/extensions/revolution.extension.slideanims.min.js"></script>
+      <script src="revslider/js/extensions/revolution.extension.video.min.js"></script>
+      <script src="js/main.js"></script>
+      <script>
+         // Open the guest speaker popup when the button is clicked
+         document.getElementById("open-speaker-popup").addEventListener("click", function() {
+            var popup = document.getElementById("speaker-popup");
+            if (popup.style.display === "block") {
+               popup.style.display = "none";
+            } else {
+               popup.style.display = "block";
+            }
+         });
+      </script>
    </body>
 </html>
