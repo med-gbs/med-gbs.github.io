@@ -34,8 +34,59 @@
         }
     .event-details p {
         color: #ffffff; /* White color */
-    }
-</style>
+    
+	/* CSS for Guest Speakers Button and Pop-up */
+	.speaker-button {
+    	text-align: center;
+    	margin-top: 20px;
+	}
+
+	.speaker-toggle-button {
+    	background-color: #0071d1;
+    	color: #fff;
+    	border: none;
+    	padding: 10px 20px;
+    	cursor: pointer;
+    	font-size: 18px;
+    	border-radius: 5px;
+	}
+
+	.speaker-toggle-button:hover + .speaker-popup {
+    	display: block;
+	}
+
+	.speaker-popup {
+    	display: none;
+    	position: absolute;
+    	background-color: #fff;
+    	padding: 10px;
+    	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    	z-index: 1;
+   	 text-align: left;
+	}
+
+	.speaker-popup a {
+    	color: #0071d1;
+    	text-decoration: none;
+    	display: block;
+    	margin-bottom: 5px;
+	}
+
+	.speaker-popup a:hover {
+    	text-decoration: underline;
+	}
+	
+	.speaker-details img {
+    	max-width: 100%;
+    	height: auto;
+    	margin-bottom: 10px;
+    	border: 2px solid #0071d1;
+    	border-radius: 5px;
+    	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+	}
+	</style>
+
+	
    <meta charset="utf-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <!-- Mobile Metas -->
@@ -115,6 +166,7 @@
                         <li><a data-scroll href="#schedule">Schedule</a></li>
                         <li><a data-scroll href="https://drive.google.com/drive/folders/1RzVTU5mcfyhJ88q8qwm0uMFGbu-h1wb_?usp=share_link">Photos</a></li>
                         <li><a data-scroll href="#The Board">The Board</a></li>
+                        <li><a data-scroll href="#guest-speakers">Guest Speakers</a></li>
                         <li><a data-scroll href="https://classroom.google.com/u/0/c/MTMxMzQ0NzY2NTYw">Google Classroom</a></li>
                         <li><a data-scroll href=" https://docs.google.com/forms/d/e/1FAIpQLSd5ZtuapHlhTNQA_u_-T5EixGAgkrHbQDz2_ZvI-FobHW2ppg/viewform?usp=sf_link">New Member Registration</a></li>
                      </ul>
@@ -206,7 +258,7 @@
                     <i class="fa fa-calendar"></i>
                 </div>
                 <div class="event-details">
-                    <h3>TBD</h3>
+                    <h3>Fun Medical Activities</h3>
                     <p>Topic: Tentative Medical Equipment Testing and More...</p>
                     <p>Date: 9/27/2023 @ 3:30pm</p>
                 </div>
@@ -310,6 +362,58 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+</div>
+<div id="speakers" class="guest-speakers-section">
+    <div class="container">
+        <div class="heading">
+            <span class="icon-logo"><img src="images/icon-logo.png" alt="#"></span>
+            <h2>Guest Speakers</h2>
+        </div>
+        <div class="speaker-button">
+            <button class="speaker-toggle-button">Meet Our Speakers</button>
+            <div class="speaker-popup">
+                <p><a data-scroll href="#speaker1">Speaker 1</a></p>
+                <p><a data-scroll href="#speaker2">Speaker 2</a></p>
+                <p><a data-scroll href="#speaker3">Speaker 3</a></p>
+                <!-- Add more speakers as needed -->
+            </div>
+        </div>
+    </div>
+</div>
+<div id="speaker1" class="speaker-section">
+    <div class="container">
+        <div class="speaker-details">
+            <img src="images/speaker1.jpg" alt="Speaker 1">
+            <h3>Speaker 1</h3>
+            <p>Topic: [Topic Name]</p>
+            <p>Date: [Date]</p>
+            <!-- Add more details as needed -->
+        </div>
+    </div>
+</div>
+
+<div id="speaker2" class="speaker-section">
+    <div class="container">
+        <div class="speaker-details">
+            <img src="images/speaker2.jpg" alt="Speaker 2">
+            <h3>Speaker 2</h3>
+            <p>Topic: [Topic Name]</p>
+            <p>Date: [Date]</p>
+            <!-- Add more details as needed -->
+        </div>
+    </div>
+</div>
+
+<div id="speaker3" class="speaker-section">
+    <div class="container">
+        <div class="speaker-details">
+            <img src="images/speaker3.jpg" alt="Speaker 3">
+            <h3>Speaker 3</h3>
+            <p>Topic: [Topic Name]</p>
+            <p>Date: [Date]</p>
+            <!-- Add more details as needed -->
         </div>
     </div>
 </div>
